@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    //Создать класс Film и полями класса: название, жанр, рейтинг, год ; Создать список фильмов. Программа должна спрашивать
+    //какая сортировка нужна пользователю (по названию, по рейтингу, по жанру или году) и выводить отсортированный список на экран.
+
+    public static void main(String[] args) {
+        Film film1 = new Film("Love Actually", "melodrama", 9.9, 2003);
+        Film film2 = new Film("Pulp Fiction", "crime", 9.8, 1994);
+        Film film3 = new Film("The Day After Tomorrow", "action", 4.7, 2004);
+        Film film4 = new Film("Awake", "triller", 7.6, 2007);
+        Film film5 = new Film("The Silence of the Lambs", "crime", 8.7, 1990);
+        Film film6 = new Film("Basic Instinct", "drama", 9.0, 1992);
+        Film film7 = new Film("The Game", "drama", 8.9, 1997);
+
+        List<Film> films = new ArrayList<>();
+        films.add(film1);
+        films.add(film2);
+        films.add(film3);
+        films.add(film4);
+        films.add(film5);
+        films.add(film6);
+        films.add(film7);
+       System.out.println(films);
+
+
+        YourChooseFilm typeSort = new YourChooseFilm();
+        typeSort.input(films);
+
+
+
+    }
+}
