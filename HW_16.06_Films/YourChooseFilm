@@ -1,0 +1,35 @@
+public class YourChooseFilm {
+
+    public void input(List<Film> films) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("By what parameter you want to make sort (1 - name; 2 - genre; 3 - rating; 4 - Year)");
+
+
+        switch (sc.nextInt()) {
+            case 1 -> {
+                Comparator<Film> byNamecomp = new CompareByName();
+                films.sort(byNamecomp);
+                System.out.println(films);
+            }
+            case 2 -> {
+                Comparator<Film> byGenrecomp = new CompareByGenre();
+                films.sort(byGenrecomp);
+                System.out.println(films);
+            }
+            case 3 -> {
+                Comparator<Film> byRatingcomp = new CompareByRating();
+                films.sort(byRatingcomp);
+                System.out.println(films);
+            }
+            case 4 -> {
+                Comparator<Film> byYearcomp = new CompareByYear();
+                films.sort(byYearcomp);
+                System.out.println(films);
+
+
+            }
+            default -> System.out.println("Make your choice again");
+
+        }
+    }
+}
