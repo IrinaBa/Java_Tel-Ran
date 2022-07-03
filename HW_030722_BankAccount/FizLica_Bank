@@ -1,0 +1,19 @@
+public class FizLica_Bank extends AllClients {
+
+    public FizLica_Bank(Accounts accounts) {
+        super(accounts);
+    }
+    public double procent(){
+    return super.procent();
+
+
+    } public String informing(){
+        return super.informing();
+    }
+
+    @Override
+    public String toString() {
+        return "FizLica_Bank: "+ getAccounts()+". Amount per monat: "+ procent()+" and " + informing()+ System.lineSeparator();
+    }
+}
+
