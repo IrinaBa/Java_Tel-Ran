@@ -1,0 +1,20 @@
+public class AllClients {
+
+    private Accounts accounts;
+
+    public AllClients(Accounts accounts) {
+        this.accounts = accounts;
+    }
+
+    public Accounts getAccounts() {
+        return accounts;
+    }
+
+    public double procent() {
+        return getAccounts().getBalance() * (1 + (getAccounts().getBaseProcent()) / 100);
+    }
+
+    public String informing() {
+        return "You get letter";
+    }
+}
