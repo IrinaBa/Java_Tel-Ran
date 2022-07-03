@@ -1,0 +1,22 @@
+public class Accounts {
+    private String IBAN;
+    private double balance;
+    private double baseProcent;
+
+    public Accounts(String IBAN, double balance) {
+        this.IBAN = IBAN;
+        this.balance = balance;
+
+            }
+
+    public double getBalance() {
+        return balance;
+    }
+    public double getBaseProcent() {
+        return baseProcent = 10;
+    }
+    @Override
+    public String toString() {
+        return "Accounts: " + IBAN +", balance: " + balance;
+    }
+}
