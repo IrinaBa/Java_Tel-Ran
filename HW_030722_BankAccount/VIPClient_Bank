@@ -1,0 +1,24 @@
+public class VIPClient_Bank extends AllClients {
+    private double VIPBonus;
+
+    public VIPClient_Bank(Accounts accounts) {
+        super(accounts);
+        this.VIPBonus = VIPBonus;
+    }
+
+    public double getVIPBonus() {
+        return VIPBonus = 500;
+    }
+    public double procent(){
+        return super.procent()+getVIPBonus();
+    }
+    public String informing(){
+        return "You get letter and email";
+
+    }
+
+    @Override
+    public String toString() {
+        return "VIPClient_Bank: " + getAccounts()+ ". Amount per monat: "+ procent()+" and " + informing()+System.lineSeparator();
+    }
+}
