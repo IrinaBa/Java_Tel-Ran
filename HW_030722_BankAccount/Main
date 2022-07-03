@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Accounts ac1 = new Accounts("DE 123 456", 123.40);
+        Accounts ac2 = new Accounts ("DE 223 456",123);
+        Accounts ac3 = new Accounts ("DE 323 456", 250.00);
+        Accounts ac4 = new Accounts("DE 423 456",5060.30);
+        Accounts ac5 = new Accounts("DE 523 456",65060.40);
+        Accounts ac6 = new Accounts("DE 623 456",1000.00);
+        Accounts ac7=new Accounts("DE 723 456", 989999.99);
+        Accounts ac8=new Accounts("DE 823 456", 89999.99);
+        Accounts ac9=new Accounts("DE 923 456", 79999.99);
+
+        FizLica_Bank fl1 = new FizLica_Bank(ac1);
+        FizLica_Bank fl2 = new FizLica_Bank(ac2);
+        FizLica_Bank fl3 = new FizLica_Bank(ac3);
+        YurLica_Bank yl1 = new YurLica_Bank(ac4);
+        YurLica_Bank yl2 = new YurLica_Bank(ac5);
+        YurLica_Bank yl3 = new YurLica_Bank(ac6);
+        VIPClient_Bank vc1 = new VIPClient_Bank(ac7);
+        VIPClient_Bank vc2 = new VIPClient_Bank(ac8);
+        VIPClient_Bank vc3 = new VIPClient_Bank(ac9);
+
+
+List<FizLica_Bank> fizLica_banks = new ArrayList<>(Arrays.asList(fl1, fl2, fl3));
+List<YurLica_Bank> yurLica_banks = new ArrayList<>(Arrays.asList(yl1, yl2, yl3));
+List<VIPClient_Bank> vipClient_banks = new ArrayList<>(Arrays.asList(vc1, vc2, vc3));
+
+       System.out.println(fizLica_banks);
+       System.out.println(yurLica_banks);
+       System.out.println(vipClient_banks);
+
+    }
+}
