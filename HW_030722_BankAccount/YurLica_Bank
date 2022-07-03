@@ -1,0 +1,23 @@
+public class YurLica_Bank extends AllClients {
+
+    public YurLica_Bank(Accounts accounts) {
+        super(accounts);
+    }
+
+    public double procent() {
+        if ( getAccounts().getBalance() >= 10000) {
+            return super.procent();
+        } else {
+            return super.getAccounts().getBalance();
+        }
+    }
+    public String informing(){
+        return super.informing();
+    }
+
+    @Override
+    public String toString() {
+        return "YurLica_Bank: " + getAccounts()+". Amount per monat: "+ procent()+" and " + informing()+System.lineSeparator();
+    }
+}
+
