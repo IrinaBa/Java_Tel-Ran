@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        //Дан список String. Необходимо получить список уникальных строк из исходного списка,
+        //которые состоят не менее чем из двух слов (слова разделены пробелом)
+        String st1 = "Irina!!";
+        String st2 = "Hello, Irina!!";
+        String st3 = "Irina!!";
+        String st4 = "Irina, hello!!";
+        String st5 = "Java!!";
+        String st6 = "Java, hello!!";
+        String st7 = "Java!!";
+        String st8 = "Java, hello, how are you!!";
+
+
+        List<String> stringList = new ArrayList<>();
+        stringList.add(st1);
+        stringList.add(st2);
+        stringList.add(st3);
+        stringList.add(st4);
+        stringList.add(st5);
+        stringList.add(st6);
+        stringList.add(st7);
+        stringList.add(st8);
+
+        Set<String> stringSet = new HashSet<>(stringList);
+        List<String> list = new ArrayList<>(stringSet);
+        System.out.println(stringSet);
+        System.out.println(findTwoWorlds(stringList));
+
+
+    }
+
+    public static HashSet<String> findTwoWorlds(List<String> list) {
+
+        Set<String> stringSet = new HashSet<>();
+        for (String stringnew : list) {
+            String[] s = stringnew.split(" ");
+            int length = s.length;
+            if (length >= 2)
+                stringSet.add(stringnew);
+        }
+
+        return (HashSet<String>) stringSet;
+
+
+    }
+}
