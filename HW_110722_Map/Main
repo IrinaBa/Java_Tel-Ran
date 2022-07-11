@@ -1,0 +1,29 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Main {
+
+    //Дан Map<String, String>, если в ней есть ключ ‘a’ и ‘b’, то нужно
+    //создать новый ключ ‘ab’ с суммой значений от ключей a и b.
+//Примеры:
+//mapAB({"a": "Hi", "b": "There"}) → {"a": "Hi", "ab": "HiThere", "b":"There"}
+//mapAB({"a": "Hi"}) → {"a": "Hi"}
+//mapAB({"b": "There"}) → {"b": "There"}
+    public static void main(String[] args) {
+        Map<String, String> map = new HashMap<>();
+        SummaAandB cAB1 = new SummaAandB("Hi ", "There");
+        SummaAandB cAB2 = new SummaAandB("Hi", " ");
+        SummaAandB cAB3 = new SummaAandB("There", " ");
+
+        Map<String, SummaAandB> mapAB = new HashMap<>();
+        mapAB.put(cAB1.getA() + cAB1.getB(), cAB1);
+        mapAB.put(cAB2.getA() + cAB2.getB(), cAB2);
+        mapAB.put(cAB3.getA() + cAB3.getB(), cAB3);
+        System.out.println(mapAB);
+
+        Set<String> key = mapAB.keySet(); //This method is used to return a Set view of the keys contained in this map.
+        System.out.println(key);
+
+    }
+}
